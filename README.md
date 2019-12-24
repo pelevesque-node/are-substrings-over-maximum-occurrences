@@ -44,7 +44,7 @@ const areSubstringsOverMaximumOccurrences = require('@pelevesque/are-substrings-
 // over occurrences returns true
 // 'a' has 4 occurrences, more than the specified limit of 2
 const str = 'aaaabbbb'
-const checks = { 'a': 2 }
+const checks = { a: 2 }
 const result = areSubstringsOverMaximumOccurrences(str, checks)
 // result === true
 ```
@@ -52,7 +52,7 @@ const result = areSubstringsOverMaximumOccurrences(str, checks)
 ```js
 // equal to occurrences returns false
 const str = 'aaaabbbb'
-const checks = { 'a': 4 }
+const checks = { a: 4 }
 const result = areSubstringsOverMaximumOccurrences(str, checks)
 // result === false
 ```
@@ -60,7 +60,7 @@ const result = areSubstringsOverMaximumOccurrences(str, checks)
 ```js
 // under occurrences returns false
 const str = 'a man, a hog, and another hog'
-const checks = { 'hog': 1 }
+const checks = { hog: 1 }
 const result = areSubstringsOverMaximumOccurrences(str, checks)
 // result === false
 ```
@@ -70,7 +70,7 @@ const result = areSubstringsOverMaximumOccurrences(str, checks)
 ```js
 // when one is over occurrences, it returns true ('a' is over 2)
 const str = 'aaaabbbb'
-const checks = { 'a': 2, 'b': 8, 'c': 2 }
+const checks = { a: 2, b: 8, c: 2 }
 const result = areSubstringsOverMaximumOccurrences(str, checks)
 // result === true
 ```
@@ -78,7 +78,7 @@ const result = areSubstringsOverMaximumOccurrences(str, checks)
 ```js
 // when all are under or equal to occurrences, it returns false
 const str = 'a man, a hog, and another hog'
-const checks = { 'a': 8, 'hog': 8, 'c': 8 }
+const checks = { a: 8, hog: 8, c: 8 }
 const result = areSubstringsOverMaximumOccurrences(str, checks)
 // result === false
 ```
